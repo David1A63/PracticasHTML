@@ -1,0 +1,19 @@
+h1{
+    color: blue;
+}
+
+p{
+    color: white;
+    background-color: crimson;
+    /* Si solo se asigna un solo valor se aplicará para los 4 lados del box */
+    padding: 15px;
+    border: 10px solid powderblue;
+    /* margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px; */
+    /* Forma simplificada de lo anterior */
+    /* margin: 40px 10px 20px 10px; */
+    margin: auto 50px;
+    text-align: center;
+}

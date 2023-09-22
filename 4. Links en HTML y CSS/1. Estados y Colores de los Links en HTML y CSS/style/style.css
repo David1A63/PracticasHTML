@@ -1,0 +1,27 @@
+h1{
+    color: #f07167;
+}
+
+a:link{
+    color: #fb8500;
+    text-decoration: none;
+}
+
+/* En caso de ya haber visitado el link se aplica el color asignado */
+a:visited{
+    color: #219ebc;
+    /* Quita el subrayado del texto */
+    text-decoration: none;
+}
+
+/* Cuando colocamos el cursor encima del link */
+a:hover{
+    color: #8ecae6;
+    text-decoration: underline;
+}
+
+/* Cuando se da clic al elemento */
+a:active{
+    color: #023047;
+    text-decoration: underline;
+}
