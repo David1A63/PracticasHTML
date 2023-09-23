@@ -1,0 +1,21 @@
+ol{
+    list-style: none;
+    /* Declarando contador */
+    counter-reset: contador;
+}
+
+ol li{
+    /* Incrementando contador por elemento */
+    counter-increment: contador;
+}
+
+ol li::before{
+    /* Concatenando el contador con una cadena al inicio del contenido del elemento li */
+    content: 'Curso ' counter(contador) ') ';
+    color: #ff6f00;
+}
+
+ol li::after{
+    /* Concatendando un punto final al final del elemento li */
+    content: '.';
+}

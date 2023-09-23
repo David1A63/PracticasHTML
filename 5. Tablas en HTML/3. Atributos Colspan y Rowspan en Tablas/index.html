@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablas en HTML</title>
+    <title>Tablas en HTML con CSS</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Tablas en HTML</h1>
-    <table border="1">
+    <h1>Tablas en HTML con CSS</h1>
+    <table>
         <!-- <tr> = tablerow (define una nueva fila) -->
         <tr>
             <!-- <th> = tablehead (cabecero de la tabla) -->
-            <th>Nombre</th>
-            <th>Apellido</th>
+            <!-- Abarcando más de una columna con colspan -->
+            <th colspan="2">Nombre</th>
             <th>Email</th>
         </tr>
         <tr>
             <!-- <td> = tabledata (para agregar celdas a la tabla) -->
             <td>Juan</td>
             <td>Hernández</td>
-            <td>juan@gmail.com</td>
+            <!-- Abarcando más de una fila con rowspan -->
+            <td rowspan="2">juan@gmail.com</td>
         </tr>
         <tr>
             <td>María</td>
             <td>Lara</td>
-            <td>mlara@gmail.com</td>
         </tr>
     </table>
 </body>
