@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Elementos de Tipo Input</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Más Elementos de Tipo Input</h1>
+    <!-- action="" - selecciona la acción a realizar -->
+    <!-- method="" - permite seleccionar el metodo get o post para enviar datos -->
+    <!-- target="" - indica hacia donde se direccionarán los datos -->
+    <!-- autocomplete="" - permite indicar si los datos del formulario se pueden
+    autocompletar -->
+    <form method="post" autocomplete="off">
+        <fieldset>
+            <legend>Datos Personales:</legend>
+            <label for="idpersona">ID Persona: </label><br>
+            <!-- Al agregar el valor readonly no se podrá modificar el texto
+            tambien se puede agregar el valor de disabled para que no se pueda seleccionar el campo
+            ni editarlo -->
+            <!-- readonly -  se envia al servidor -->
+            <!-- disabled - no se envia al servidor -->
+            <input type="text" id="idpersona" name="idpersona" placeholder="Escribe tu nombre" disabled="true" value="100"/><br>
+            
+            <!-- Valores oculto -->
+            <input type="hidden" id="sistema" name="sistema" value="SAP">
+
+            <label for="nombre">Nombre: </label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true"/><br>
+            
+            <label for="apellido">Apellido: </label><br>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"/><br>
+            
+            <label for="email">Email: </label><br>
+            <input type="email" name="email" id="email" placeholder="Ingresa tu Email"><br>
+            
+            <label for="edad">Edad:</label><br>
+            <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad" step="any"><br>
+            <label for="genero">Género</label><br>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            
+            <label for="musica">Género de Música Favorita: </label><br>
+            <input type="checkbox" name="musica" id="clasica" value="clasica">
+            <label for="clasica">Clásica</label>
+            <input type="checkbox" name="musica" id="disco" value="disco">
+            <label for="disco">Disco</label><br>
+                    
+            <label for="autos">Marca de Auto Favorita:</label><br>
+            <select name="autos" id="autos">
+            <option value="volvo">Volvo</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="bmw" selected="true">BMW</option>
+            </select><br>
+            
+            <label for="comentario">Escribe un comentario:</label><br>
+            <textarea name="comentario" id="comentario" cols="30" rows="2">Hola, este es un msg!!!</textarea>
+            
+            <br><br>
+            <input type="submit" value="Enviar"/>
+            <input type="submit" formnovalidate="formnovalidate" value="Enviar sin Validar">
+            <!-- Botón para reiniciar el formulario -->
+            <input type="reset" value="Reestablecer Formulario">
+        </fieldset>
+    </form>
+</body>
+</html>

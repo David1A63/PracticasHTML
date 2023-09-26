@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Select y Textarea</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Elementos Select y Textarea</h1>
+    <form>
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true"/><br>
+
+        <label for="apellido">Apellido: </label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"/><br>
+
+        <label for="email">Email: </label><br>
+        <input type="email" name="email" id="email" placeholder="Ingresa tu Email"><br>
+
+        <label for="edad">Edad:</label><br>
+        <!-- Para agregar valores decimales podemos usar step="any" -->
+        <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad" step="any"><br>
+        <!-- Para que solo se seleccione un radio button al elegir el genero
+        se debe asignar el mismo name a ambas opciones en los radiobutton -->
+        <label for="genero">Género</label><br>
+        <!-- Componente con name="genero" -->
+        <!-- El valor se obtiene del atributo value -->
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label>
+        <!-- Componente con name="genero" -->
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        
+        <!-- Los checkbox funcionan de la misma manera que los radiobutton
+        los elementos relacionados deben llevar el mismo name en este caso -->
+        <!-- Al seleccionar un checkbox los datos de guardan como un arreglo, ej.
+        musica[clasica, disco] -->
+        <label for="musica">Género de Música Favorita: </label><br>
+        <input type="checkbox" name="musica" id="clasica" value="clasica">
+        <label for="clasica">Clásica</label>
+        <input type="checkbox" name="musica" id="disco" value="disco">
+        <label for="disco">Disco</label><br>
+
+        <label for="autos">Marca de Auto Favorita:</label><br>
+        <!-- Al asignar el valor de multiple se pueden asignar más de una opción
+        pulsando la tecla ctrl -->
+        <!-- Al seleccionar más de un elemento se comportará como un checkbox -->
+        <select name="autos" id="autos">
+            <option value="volvo">Volvo</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="chevrolet">Chevrolet</option>
+            <!-- Al agregar el atributo selected ese sera el elemento seleccionado al cargar
+            la página -->
+            <option value="bmw" selected="true">BMW</option>
+        </select><br>
+        
+        <label for="comentario">Escribe un comentario:</label><br>
+        <!-- El texto entre las etiquetas aparecerá dentro de la etiqueta text area -->
+        <textarea name="comentario" id="comentario" cols="30" rows="2">Hola, este es un msg!!!</textarea>
+
+        <br><br>
+        <input type="submit" value="Enviar"/>
+        <input type="submit" formnovalidate="formnovalidate" value="Enviar sin Validar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Formularios en HTML</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Validar Formularios en HTML</h1>
+    <!-- En caso de no querer validar un formulario podemos agregar a la etiqueta
+    form el atributo novalidate <form novalidate> -->
+    <form>
+        <!-- Para relacionar el label con el input basta con agregar el id del input en el for -->
+        <label for="nombre">Nombre: </label><br>
+        <!-- Es importante asignar el atributo name de un input ya que indica el nombre del
+        elemento del formulario que se enviara al pulsar el botón de enviar -->
+        <!-- En caso de necesitar que un campo sea requerido se puede agregar el atributo
+        required o required='true' -->
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true"/><br>
+        <label for="apellido">Apellido: </label><br>
+        <!-- El placeholder sirve para indicar algo sin que haga uso del valor del campo -->
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"/><br>
+        <input type="submit" value="Enviar"/>
+        <!-- Segunda forma de enviar sin validar un formulario -->
+        <input type="submit" formnovalidate="formnovalidate" value="Enviar sin Validar">
+    </form>
+</body>
+</html>

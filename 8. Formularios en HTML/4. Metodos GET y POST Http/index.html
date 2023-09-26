@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos HTTP Get y Post</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Metodos HTTP Get y Post</h1>
+    <!-- Por defecto se enviarán los datos por medio del metodo get -->
+    <!-- El metodo get usa query strings: nombre=David&apellido=Dominguez -->
+    <!-- Los Datos enviados a traves de POST no serán mostrados en la URL
+    de la página web, pero podrán ser vistos en el historial de solicitudes de la página
+    utilizando la opcion de inspeccionar de cualquier navegador que se este utilizando. -->
+    <form method="post">
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true"/><br>
+        
+        <label for="apellido">Apellido: </label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"/><br>
+
+        <label for="password">Contraseña: </label><br>
+        <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required="true"/><br>
+
+        <input type="submit" value="Enviar"/>
+        <input type="submit" formnovalidate="formnovalidate" value="Enviar sin Validar">
+    </form>
+</body>
+</html>
